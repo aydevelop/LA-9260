@@ -16,7 +16,7 @@ class DatabaseSeeder extends Seeder
         DB::table('users')->delete();
         DB::table('posts')->delete();
 
-        factory(Post::class, 10)->create();
+        factory(Post::class, 12)->create();
 
         User::create([
             'name' => 'root',

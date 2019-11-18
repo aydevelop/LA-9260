@@ -1,10 +1,14 @@
-<div class="navbar navbar-inverse">
-    <div class="container">
+<div >
+  <nav class="navbar navbar-inverse">
+      <div class="container">
         <div class="navbar-header">
-            <a href="#" class="navbar-brand">Animals</a>
+          <a class="navbar-brand" href="#">Animals</a>
         </div>
-        <ul class="nav">
-            <li><a href="/subscribe">Subscribe</a></li> 
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active">
+            <a  href="/subscribe">Subscribe</a>
+          </li>
         </ul>
-    </div>
+      </div>
+    </nav>
 </div>
