@@ -8,6 +8,12 @@
           <li class="active">
             <a  href="/subscribe">Subscribe</a>
           </li>
+            @if(Auth::user())
+              <li><a href="/logout">Logout</a></li>
+            @else
+            <li><a href="/login">Login</a></li>
+            <li><a href="/register">Register</a></li>
+            @endif
         </ul>
       </div>
     </nav>

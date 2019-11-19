@@ -17,7 +17,7 @@
          <div class="container">
             <div class="section-header">
                 <h2>
-                    Latest Animals
+                    Latest...
                 </h2>
             </div>
             <div class="row">
