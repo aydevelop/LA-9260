@@ -166,9 +166,33 @@ h1,h2,h3,h4,h5,h6{
 
     .price-premium{
         background: #F42E45;
-    }
+    } 
 
     .price-free{
         background: #02BD70;
+    }
+}
+
+.post-single{
+    margin-bottom: 50px;
+    margin-top: 50px;
+
+    .img-container{
+        height: 400px;
+    }
+
+    .card-content{
+        padding: 50px 100px;
+    }
+
+    h1{
+        font-size: 50px;
+        margin: 0 0 20px
+    }
+
+    .byline{
+        font-size: 14px;
+        color: #BBB;
+        margin-bottom: 20px;
     }
 }

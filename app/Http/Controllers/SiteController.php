@@ -15,6 +15,7 @@ class SiteController extends Controller
     }
 
     public function showPost($slug){
-        return view('post');
+        $post = Post::whereSlug($slug)->with('author')->firstOrFail();
+        return view('post', compact('post'));
     }
 }
