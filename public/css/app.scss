@@ -105,6 +105,10 @@ h1,h2,h3,h4,h5,h6{
     font-style: italic;
 }
 
+.card-padded{
+    padding: 30px;
+}
+
 .card{
     background: #FFF;
     border-radius: 3px;
@@ -200,12 +204,45 @@ h1,h2,h3,h4,h5,h6{
 .auth-card{
     margin-top: 50px;
     margin-bottom: 50px;
-
    
     padding: 30px;
 
     h1 {
         text-align: center;
     }
-    
+}
+
+.subscription-option{
+
+    input[type=radio]{
+        display: none;
+    }
+
+    label{
+        display: block;
+        width: 100%;
+        min-height: 200px;
+        border-radius: 4px;
+        background: #F2F2F2;
+        color: #545454;
+        font-size: 40px;
+        text-align: center;
+        cursor: pointer;
+        padding-top: 50px;
+    }
+
+    .plan-price{
+        font-family: $header-font;
+    }
+
+    .plan-name{
+        display: block;
+        font-size: 24px;
+    }
+ 
+    input[type=radio]:checked + label {
+        background: #0B79EE;
+        color: #FFF;
+    }
+
 }
