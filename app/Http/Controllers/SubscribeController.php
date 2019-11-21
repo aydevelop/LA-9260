@@ -35,18 +35,25 @@ class SubscribeController extends Controller
            } catch (\Exception $e) {
                return back()->withErrors(['message' => 'Error creating user.']);
            }
+        }
 
-           try {
-                $user->newSubscription('main', $plan)->create($ccToken, [
-                    'email' => $user->email
-                ]);
-            } catch (\Exception $e) {
-                return back()->withErrors(['message' => 'Error creating subscription.']);
-            }
-            
-            return "ok";
+        $ccToken = $request->input('cc_token');
+        $plan = $request->input('plan');
 
-       }
+        $plan_id = "test";
+        if($plan == "Bronze"){ $plan_id="plan_GDjjZK3iUySkcW"; }
+        if($plan == "Silver"){ $plan_id="plan_GCyUAGL6l2CoHi";  }
+
+        try {
+            $user->newSubscription('primary',  $plan_id)->create($ccToken, [
+                'email' => $user->email
+            ]);
+        } catch (Exception $e) {
+            return $e;
+            //return back()->withErrors(['message' => 'Error creating subscription.']);
+        }
+        
+        return "ok";
     } 
 
     public function shoWelcome()

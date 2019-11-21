@@ -6,10 +6,12 @@ $(document).ready(function(){
         let form = $(this);
         form.find('input[type="submit"]').prop('disabled', true);
 
-        Stripe.card.createToken(form, function(status,res){
-           
 
-            console.log(JSON.stringify(res))
+        console.log("form -- ", JSON.stringify(form))
+
+        Stripe.card.createToken(form, function(status,res){
+        
+            console.log("id --",res.id);
 
             if(res.error){
                  form.find('.stripe-errors').text(res.error.message);

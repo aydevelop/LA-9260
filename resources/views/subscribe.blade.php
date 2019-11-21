@@ -56,8 +56,8 @@
                         <div class="subscription-option">
                             <input type="radio" 
                             id="plan-bronze" name="plan" 
-                            value="bronze"
-                            selected>
+                            value="Bronze"
+                            >
                             <label for="plan-bronze">
                                 <span class="plan-price">$5 <small>/mo</small></span>
                                 <span class="plan-name">Bronze</span>
@@ -68,8 +68,7 @@
                         <div class="subscription-option">
                             <input type="radio" 
                             id="plan-silver" name="plan" 
-                            value="silver"
-                            selected>
+                            value="Silver" checked>
                             <label for="plan-silver">
                                 <span class="plan-price">$10 <small>/mo</small></span>
                                 <span class="plan-name">Silver</span>
@@ -83,27 +82,29 @@
             <div class="form-group row">
                 <div class="col-xs-8">
                     <label> Credit Card Number </label>
-                    <input type="text" class="form-control" placeholder="123 123 123 123" data-stripe="number">
+                    <input type="text" value="5200828282828210" class="form-control" placeholder="123 123 123 123" data-stripe="number">
                 </div>
                 <div class="col-xs-4">
                     <label>CVC</label>
-                    <input type="text" class="form-control" placeholder="123" data-stripe="cvc" >
+                    <input type="text" value="123" class="form-control" placeholder="123" data-stripe="cvc" >
                 </div>
             </div>
 
             <div class="form-group row">
                 <div class="col-xs-3">
                     <label>Expiration Month</label>
-                    <input type="text" class="form-control" placeholder="01" data-stripe="exp-month">
+                    <input type="text" class="form-control" placeholder="01" value="01" data-stripe="exp-month">
                 </div>
                 <div class="col-xs-3">
                     <label>Expiration Year</label>
-                    <input type="text" class="form-control" placeholder="2030" data-stripe="exp-year">
+                    <input type="text" class="form-control" placeholder="2030" value="2020" data-stripe="exp-year">
                 </div>
             </div>
 
             
-
+            <p>
+                <b>Test card: 5200828282828210, any cvc, any future date</b>
+            </p>
             <div class="form-group text-center">
                 <input type="submit" class="btn-block btn btn-success" value="Join">
                    

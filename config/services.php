@@ -31,8 +31,8 @@ return [
 
     'stripe' => [
         'model' => App\User::class,
-        'key' => 'sk_test_3T6Xgi8UC1xB1gLwnkw3J6XT00G0xXybvm',
-        'secret' => 'pk_test_NJ4VpIpG2R6VdM3RVaIKyrRQ00meMESPbM',
+        'key' => 'pk_test_NJ4VpIpG2R6VdM3RVaIKyrRQ00meMESPbM',
+        'secret' => 'sk_test_3T6Xgi8UC1xB1gLwnkw3J6XT00G0xXybvm',
     ],
 
 ];

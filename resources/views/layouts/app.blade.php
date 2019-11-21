@@ -28,7 +28,7 @@
     
     <script src="https://js.stripe.com/v2"></script>
     <script>
-        Stripe.setPublishableKey("{{ env('STRIPE_KEY') }}")
+        Stripe.setPublishableKey("pk_test_NJ4VpIpG2R6VdM3RVaIKyrRQ00meMESPbM")
     </script>
     <script src="js/app.js"></script>
 </body>
