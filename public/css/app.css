@@ -160,3 +160,9 @@ h1, h2, h3, h4, h5, h6 {
 .subscription-option input[type=radio]:checked + label {
   background: #0B79EE;
   color: #FFF; }
+
+.stripe-errors {
+  color: red; }
+
+.dsjfjsjdf {
+  color: green; }

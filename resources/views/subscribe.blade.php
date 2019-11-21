@@ -11,6 +11,17 @@
 
    <section class="container">
        <div class="card card-padded">
+        <form action="/subscribe" method="POST" id="subscribe-form">
+
+            {!! csrf_field()  !!}
+
+            <div class="stripe-errors">
+                @if ($errors->any())
+                    @foreach ($errors->all() as $error)
+                        <div>{{$error}}</div>
+                    @endforeach
+                @endif
+            </div>
 
             @if(Auth::guest())
 
@@ -30,7 +41,7 @@
 
             <div class="form-group">
                 <label>Password</label>
-                <input type="password" class="form-control" name="password " />
+                <input type="password" class="form-control" name="password" />
             </div>
 
             @endif
@@ -71,31 +82,33 @@
 
             <div class="form-group row">
                 <div class="col-xs-8">
-                    <label> Credit Card Info </label>
-                    <input type="text" class="form-control" placeholder="123 123 123 123">
+                    <label> Credit Card Number </label>
+                    <input type="text" class="form-control" placeholder="123 123 123 123" data-stripe="number">
                 </div>
                 <div class="col-xs-4">
                     <label>CVC</label>
-                    <input type="text" class="form-control" placeholder="123">
+                    <input type="text" class="form-control" placeholder="123" data-stripe="cvc" >
                 </div>
             </div>
 
             <div class="form-group row">
                 <div class="col-xs-3">
                     <label>Expiration Month</label>
-                    <input type="text" class="form-control" placeholder="01" >
+                    <input type="text" class="form-control" placeholder="01" data-stripe="exp-month">
                 </div>
                 <div class="col-xs-3">
                     <label>Expiration Year</label>
-                    <input type="text" class="form-control" placeholder="30">
+                    <input type="text" class="form-control" placeholder="2030" data-stripe="exp-year">
                 </div>
             </div>
+
+            
 
             <div class="form-group text-center">
                 <input type="submit" class="btn-block btn btn-success" value="Join">
                    
             </div>
-
+        </form>
        </div>
    </section>
 
