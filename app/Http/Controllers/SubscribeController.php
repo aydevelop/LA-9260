@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Post;
 
 use App\Http\Requests;
+use Illuminate\Http\Request;
 
 class SubscribeController extends Controller
 {
@@ -35,9 +36,22 @@ class SubscribeController extends Controller
                return back()->withErrors(['message' => 'Error creating user.']);
            }
 
-           return 'OK';
-       }
+           try {
+                $user->newSubscription('main', $plan)->create($ccToken, [
+                    'email' => $user->email
+                ]);
+            } catch (\Exception $e) {
+                return back()->withErrors(['message' => 'Error creating subscription.']);
+            }
+            
+            return "ok";
 
- 
+       }
     } 
+
+    public function shoWelcome()
+    {
+        $posts = Post::where('premium', true)->get();
+        return view('welcome', compact('posts'));
+    }
 }
