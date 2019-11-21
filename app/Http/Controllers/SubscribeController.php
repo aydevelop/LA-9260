@@ -49,8 +49,7 @@ class SubscribeController extends Controller
                 'email' => $user->email
             ]);
         } catch (Exception $e) {
-            return $e;
-            //return back()->withErrors(['message' => 'Error creating subscription.']);
+            return back()->withErrors(['message' => 'Error creating subscription.']);
         }
         
         return "ok";
