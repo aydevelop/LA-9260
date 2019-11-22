@@ -52,7 +52,7 @@ class SubscribeController extends Controller
             return back()->withErrors(['message' => 'Error creating subscription.']);
         }
         
-        return "ok";
+        return redirect('welcome');
     } 
 
     public function shoWelcome()

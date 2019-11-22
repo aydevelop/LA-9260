@@ -16,7 +16,22 @@
                 <div class="byline">
                     {{ $post->author->name }}
                 </div>
-                {!! $post->content !!}
+
+                @if($post->premium and !(Auth::user() and Auth::user()->subscribed('main')))
+                
+                    <div>
+                        <h3>
+                            Subscribe to gain access
+                        </h3>
+                        <h4>
+                            <a href="/subscribe">
+                                Subscribe Now
+                            </a>
+                        </h4>
+                    </div>
+                @else
+                    {!! $post->content !!}
+                @endif
             </header>
         </div>
     </div>

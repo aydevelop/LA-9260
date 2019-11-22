@@ -5,9 +5,12 @@
           <a class="navbar-brand" href="/">HI - FI</a>
         </div>
         <ul class="nav navbar-nav navbar-right">
-          <li class="active">
-            <a  href="/subscribe">Subscribe</a>
-          </li>
+          @if(! (Auth::user() and Auth::user()->subscribed('primary')))
+            <li class="active">
+              <a  href="/subscribe">Subscribe</a>
+            </li>
+          @endif
+          
             @if(Auth::user())
               <li><a href="/logout">Logout</a></li>
             @else
