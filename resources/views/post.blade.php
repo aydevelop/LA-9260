@@ -17,7 +17,7 @@
                     {{ $post->author->name }}
                 </div>
 
-                @if($post->premium and !(Auth::user() and Auth::user()->subscribed('main')))
+                @if($post->premium and !(Auth::user() and Auth::user()->subscribed('primary')))
                 
                     <div>
                         <h3>

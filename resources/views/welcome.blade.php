@@ -3,15 +3,9 @@
 
    @section('content')
     <div class="container" >
-        <div class="section-header">
-                <h2>
-                    Premium Posts
-                </h2>
-            </div>
-            <p class="text-center lead">
-                You now have access to these premium!
-            </p>
-        </div>
+        <h2>
+            Premium Posts
+        </h2>
 
         <div class="row">
             <div class="col-sm3">
