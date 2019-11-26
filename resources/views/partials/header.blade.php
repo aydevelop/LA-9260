@@ -2,7 +2,7 @@
   <nav class="navbar navbar-inverse">
       <div class="container">
         <div class="navbar-header">
-          <a class="navbar-brand" href="/">HI - FI</a>
+          <a class="navbar-brand" href="/">[  HI - FI  ]</a>
         </div>
         <ul class="nav navbar-nav navbar-right">
           @if(! (Auth::user() and Auth::user()->subscribed('primary')))
@@ -12,6 +12,7 @@
           @endif
           
             @if(Auth::user())
+              <li><a href="/account">{{ Auth::user()->email }}</a></li>
               <li><a href="/logout">Logout</a></li>
             @else
             <li><a href="/login">Login</a></li>

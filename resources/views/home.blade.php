@@ -22,7 +22,7 @@
             </div>
             <div class="row">
                 @foreach($posts as $post)
-                    <div class="col-sm-3">
+                    <div class="col-sm-6">
                         @include('partials.post-card',['post'=>$post])
                     </div>
                 @endforeach
